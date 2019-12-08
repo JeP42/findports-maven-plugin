@@ -1,4 +1,4 @@
-package com.github.jep42.portoffsetfinder;
+package com.github.jep42.findports;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
