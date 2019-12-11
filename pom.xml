@@ -9,7 +9,7 @@
 
     <groupId>com.github.jep42</groupId>
     <artifactId>findports-maven-plugin</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>findports-maven-plugin Maven Plugin</name>
@@ -40,7 +40,7 @@
         <url>https://github.com/JeP42/findports-maven-plugin</url>
         <connection>scm:git:git@github.com:JeP42/findports-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:JeP42/findports-maven-plugin.git</developerConnection>
-        <tag>findports-maven-plugin-0.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
