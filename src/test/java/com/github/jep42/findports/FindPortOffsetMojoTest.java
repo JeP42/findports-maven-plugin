@@ -50,14 +50,18 @@ public class FindPortOffsetMojoTest {
     	mojoUnderTest.execute();
     	
     	//THEN
-    	verify(projectProperties, times(2)).put(keyCaptor.capture(), valueCaptor.capture());
+    	verify(projectProperties, times(3)).put(keyCaptor.capture(), valueCaptor.capture());
     	
     	List<String> capturedKeys = keyCaptor.getAllValues();
     	List<String> capturedValues = valueCaptor.getAllValues();
-    	assertEquals("anotherPort", capturedKeys.get(0));
-    	assertEquals("httpPort", capturedKeys.get(1));
-    	assertEquals("10200", capturedValues.get(0));
-    	assertEquals("8080", capturedValues.get(1));
+    	
+    	assertEquals("portOffset", capturedKeys.get(0));
+    	assertEquals("anotherPort", capturedKeys.get(1));
+    	assertEquals("httpPort", capturedKeys.get(2));
+    	
+    	assertEquals("0", capturedValues.get(0));
+    	assertEquals("10200", capturedValues.get(1));
+    	assertEquals("8080", capturedValues.get(2));
     }
     
     
@@ -128,6 +132,7 @@ public class FindPortOffsetMojoTest {
     	new FieldSetter(mojoUnderTest, mojoUnderTest.getClass().getDeclaredField("maxIterations")).set(5);
     	new FieldSetter(mojoUnderTest, mojoUnderTest.getClass().getDeclaredField("ports")).set(ports);
     	new FieldSetter(mojoUnderTest, mojoUnderTest.getClass().getDeclaredField("project")).set(project);
+    	new FieldSetter(mojoUnderTest, mojoUnderTest.getClass().getDeclaredField("resultProperty")).set("portOffset");
 	}
     
 }

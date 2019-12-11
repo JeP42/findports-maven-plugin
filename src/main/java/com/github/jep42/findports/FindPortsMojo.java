@@ -44,6 +44,12 @@ public class FindPortsMojo extends AbstractMojo {
     private Integer maxIterations;
 
     /**
+     * The available port offset is published under this name as Maven property
+     */
+    @Parameter(defaultValue = "portOffset", property = "resultProperty", required = false)
+    private String resultProperty;
+    
+    /**
      * The ports to be tested. If a valid port offset can be found then for each
      * port a corresponding Maven property is published which contains the free port
      * number.
@@ -125,9 +131,9 @@ public class FindPortsMojo extends AbstractMojo {
      */
     private void findPortsSucceeded(Integer portOffset) {
         getLog().info("Port-Offset found: " + portOffset);
+        project.getProperties().put(this.resultProperty, String.valueOf(portOffset));
         for (Entry<Object, Object> port : this.ports.entrySet()) {
-            project.getProperties().put(port.getKey().toString(),
-                    String.valueOf(Integer.parseInt(port.getValue().toString()) + portOffset));
+            project.getProperties().put(port.getKey().toString(), String.valueOf(Integer.parseInt(port.getValue().toString()) + portOffset));
         }
     }
 
