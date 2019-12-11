@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,7 +9,7 @@
 
     <groupId>com.github.jep42</groupId>
     <artifactId>findports-maven-plugin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>findports-maven-plugin Maven Plugin</name>
@@ -42,7 +40,7 @@
         <url>https://github.com/JeP42/findports-maven-plugin</url>
         <connection>scm:git:git@github.com:JeP42/findports-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:JeP42/findports-maven-plugin.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>findports-maven-plugin-0.0.1</tag>
     </scm>
 
     <issueManagement>
