@@ -7,7 +7,7 @@ env:
 
 addons:
   sonarcloud:
-    organization: "JeP42"
+    organization: "jep42-github"
     token: $SONAR_TOKEN
 jdk:
 - openjdk8
